@@ -343,7 +343,7 @@ Output:
 
 
 Result:
-Thus, the program is verified successfully
+Thus, the program is verified successfully.
 
 
 
