@@ -133,10 +133,47 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
-//type your code here
+```
+#include <stdio.h>
+int main() {
+    int noshel, noque;
+    printf("Enter the number of shelves and queries:\n");
+    scanf("%d %d", &noshel, &noque);
+    int shelarr[noshel][100];
+    int nobookarr[noshel];
+
+    for (int i = 0; i < noshel; i++) {
+        nobookarr[i] = 0;
+    }
+
+    for (int i = 0; i < noque; i++) {
+        int type, shelf, book;
+        printf("Enter query type (1 for add book, 2 for view book count):\n");
+        scanf("%d", &type);
+        
+        if (type == 1) {
+            printf("Enter shelf and book to add:\n");
+            scanf("%d %d", &shelf, &book);
+            
+            shelarr[shelf][nobookarr[shelf]] = book;
+            nobookarr[shelf]++;
+        } else if (type == 2) {
+            printf("Enter shelf to view book count:\n");
+            scanf("%d", &shelf);
+            printf("Number of books on shelf %d: %d\n", shelf, nobookarr[shelf]);
+        } else {
+            printf("Invalid query type.\n");
+        }
+    }
+
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/c847971e-3a66-492c-8a38-22664fc29376)
+
 
 
 Result:
@@ -160,10 +197,29 @@ Algorithm:
 
 
 Program:
-//type your code here
+```
+#include <stdio.h>
+int main() {
+    int n, sum = 0;
+    printf("Enter the number of integers:\n");
+    scanf("%d", &n);
+    int a[n];
+    printf("Enter the integers:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+        sum += a[i];
+    }
+
+    printf("The sum of the integers is: %d\n", sum);
+
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/b95ecdab-ba00-4682-b499-76322b59c3ab)
+
 
  
 
@@ -194,10 +250,31 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
-//type your code here
+```
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char sentence[1000];
+    int wordCount = 0;
+    printf("Enter a sentence:\n");
+    fgets(sentence, sizeof(sentence), stdin);
+
+    for (int i = 0; i < strlen(sentence); i++) {
+        if ((i == 0 && sentence[i] != ' ') || (sentence[i] != ' ' && sentence[i-1] == ' ')) {
+            wordCount++;
+        }
+    }
+
+    printf("The number of words in the sentence is: %d\n", wordCount);
+
+    return 0;
+}
+```
 
 Output:
-//paste your output here
+
+![image](https://github.com/user-attachments/assets/31156858-1bb8-4432-8845-44a19ba45c11)
+
 
 
 
