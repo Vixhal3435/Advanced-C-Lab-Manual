@@ -275,8 +275,9 @@ void dequeue() {
 }
 
 int main() {
-    rear = 0;
-    queue[rear] = 10;
+    
+    queue[++rear] = 10;
+    front = rear;
     queue[++rear] = 20;
     queue[++rear] = 30;
 
@@ -291,7 +292,8 @@ int main() {
 
 Output:
 
-![image](https://github.com/user-attachments/assets/537eb2c6-3fc3-4a11-b3f7-47c017b05b7f)
+![WhatsApp Image 2025-04-28 at 16 14 29_0fe00da6](https://github.com/user-attachments/assets/a96fd684-68db-43cc-91b4-892b5c5d8552)
+
 
 
 
